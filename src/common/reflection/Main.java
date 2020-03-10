@@ -2,6 +2,13 @@ package common.reflection;
 
 import java.lang.reflect.Method;
 
+
+/*<? extends T>允许调用读方法T get()获取T的引用，但不允许调用写方法set(T)传入T的引用（传入null除外）；
+
+        <? super T>允许调用写方法set(T)传入T的引用，但不允许调用读方法T get()获取T的引用（获取Object除外）。
+
+           一个是允许读不允许写，另一个是允许写不允许读。
+ */
 public class Main {
 
     //多肽方法调用
