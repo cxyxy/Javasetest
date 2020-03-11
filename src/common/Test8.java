@@ -8,6 +8,10 @@ import java.util.Queue;
  * Date: 2020/3/10
  * Time: 14:15
  */
+
+//PriorityQueue实现了一个优先队列：从队首获取元素时，总是获取优先级最高的元素。
+
+//PriorityQueue默认按元素比较的顺序排序（必须实现Comparable接口），也可以通过Comparator自定义排序算法（元素就不必实现Comparable接口）。
 public class Test8 {
 
         public static void main(String[] args) {
