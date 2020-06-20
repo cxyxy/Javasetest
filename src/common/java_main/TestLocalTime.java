@@ -1,5 +1,6 @@
 package common.java_main;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -18,6 +19,12 @@ public class TestLocalTime {
 
 
         //时区时间,本地时间-》时区时间
+        Instant instant = Instant.ofEpochMilli(100000L);
+        ZonedDateTime zonedDateTime1 = instant.atZone(ZoneId.systemDefault());
+        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String startDateStr = dateTimeFormatter1.format(zonedDateTime1);
+        String endDateStr = dateTimeFormatter1.format(zonedDateTime1);
+
         ZonedDateTime zonedDateTime = now.atZone(ZoneId.of("Europe/Berlin"));
         System.out.println(zonedDateTime);
         //所有时区
